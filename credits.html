@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>About Squitty</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .tagline { color: var(--secondary-color); font-style: italic; margin-top: 4px; text-align: center; }
+        .version { font-size: 0.9em; color: var(--muted-color); margin-top: 8px; text-align: center; }
+        .author-box {
+            background: #f0f0f0;
+            padding: 12px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        .author-name { font-weight: bold; display: block; }
+        .author-email { color: #555; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🐭 Squitty</h1>
+            <p class="tagline">Give your mouse a soul. And some gears.</p>
+            <p class="version">v1.1.1</p>
+        </div>
+
+        <div class="section">
+            <p>A lightweight background application that produces real-time mechanical sounds for mouse events to provide haptic-like auditory feedback.</p>
+        </div>
+
+        <div class="section">
+            <h2>Author</h2>
+            <div class="author-box">
+                <span class="author-name">Marcello Barile</span>
+                <span class="author-email">marcello@barile.eu</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Key Features</h2>
+            <ul>
+                <li><strong>Mechanical Clicks</strong>: Distinct sounds for Press and Release.</li>
+                <li><strong>Fluid Movement</strong>: Smooth faded trails following your cursor.</li>
+                <li><strong>Kinetic Scrolling</strong>: Feedback that responds to interaction speed.</li>
+                <li><strong>Hold Effect</strong>: Pulsing sci-fi "wooom wooom" sounds.</li>
+                <li><strong>Stereophonic Magic</strong>: Real-time spatial audio panning.</li>
+                <li><strong>Physical Friction</strong>: Dynamic velocity-based modulation.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Tech Specs</h2>
+            <p>Powered by <strong>Electron</strong>, <strong>uiohook-napi</strong>, and the <strong>Web Audio API</strong> for ultra-low latency sound synthesis.</p>
+        </div>
+
+        <div class="footer">
+            <p>Licensed under the MIT License</p>
+            <button class="btn" style="width: 100px; margin-top: 10px;" onclick="window.close()">Close</button>
+        </div>
+    </div>
+</body>
+</html>

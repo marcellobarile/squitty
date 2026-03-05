@@ -1,0 +1,80 @@
+{
+  "name": "squitty",
+  "productName": "Squitty",
+  "version": "1.1.1",
+  "description": "A lightweight background application that produces real-time mechanical sounds for mouse events (click, scroll, movement) to provide haptic-like auditory feedback.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcellobarile/squitty.git"
+  },
+  "bugs": {
+    "url": "https://github.com/marcellobarile/squitty/issues"
+  },
+  "homepage": "https://github.com/marcellobarile/squitty#readme",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pack": "electron-builder build --dir",
+    "dist": "electron-builder build",
+    "dist:all": "electron-builder build --mac --win --linux"
+  },
+  "build": {
+    "appId": "com.marcellobarile.squitty",
+    "productName": "Squitty",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "index.js",
+      "constants.js",
+      "utils.js",
+      "audio-renderer.js",
+      "settings-renderer.js",
+      "audio.html",
+      "settings.html",
+      "credits.html",
+      "style.css",
+      "iconTemplate.png",
+      "node_modules/**/*"
+    ],
+    "mac": {
+      "category": "public.app-category.utilities",
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Utility"
+    }
+  },
+  "keywords": [
+    "electron",
+    "background-app",
+    "audio-synthesis",
+    "haptic-feedback",
+    "mouse-sounds",
+    "mechanical-keyboard",
+    "uiohook-napi"
+  ],
+  "author": "Marcello Barile <marcello@barile.eu>",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^40.7.0",
+    "electron-builder": "^26.8.1"
+  },
+  "dependencies": {
+    "uiohook-napi": "^1.5.4"
+  }
+}
